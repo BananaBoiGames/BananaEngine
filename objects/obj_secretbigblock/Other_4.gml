@@ -1,0 +1,22 @@
+if (ds_list_find_index(global.saveroom, id) != -1)
+{
+    instance_destroy();
+}
+else
+{
+    var num = instance_place_list(x, y, 407, global.instancelist, false);
+    
+    for (var i = 0; i < num; i++)
+    {
+        var b = global.instancelist[| i];
+        
+        with (b)
+        {
+            secretjumped = false;
+            savedsecretinvincible = invincible;
+            state = (266 << 0);
+        }
+    }
+    
+    ds_list_clear(global.instancelist);
+}

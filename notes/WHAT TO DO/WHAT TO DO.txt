@@ -1,0 +1,4 @@
+Work on replacing bitwise with state.normal (enum names)
+
+implement all of this:
+https://docs.google.com/document/d/1foM1D-PGxHZRds1jEmRm_C-Ym6gOKQgRBr18XESmeVM/edit?tab=t.0#heading=h.g5pm0r95rqcp

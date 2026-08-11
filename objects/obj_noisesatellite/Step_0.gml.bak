@@ -1,0 +1,65 @@
+switch (state)
+{
+    case (126 << 0):
+        scr_enemy_idle();
+        break;
+    
+    case (130 << 0):
+        scr_enemy_turn();
+        break;
+    
+    case (134 << 0):
+        scr_enemy_walk();
+        break;
+    
+    case (136 << 0):
+        scr_enemy_land();
+        break;
+    
+    case (137 << 0):
+        scr_enemy_hit();
+        break;
+    
+    case (138 << 0):
+        scr_enemy_stun();
+        break;
+    
+    case (4 << 0):
+        scr_enemy_grabbed();
+        break;
+}
+
+if (!instance_exists(obj_slaphitbox))
+    slapped = false;
+
+stunned = 100;
+
+if (cigar == false)
+{
+    landspr = 25;
+    idlespr = 25;
+    fallspr = 25;
+    hitceillingspr = 25;
+    stunfalltransspr = 25;
+    hitwallspr = 25;
+    stunfallspr = 23;
+    rollingspr = 25;
+    walkspr = 25;
+    turnspr = 25;
+    flyingspr = 25;
+    hitspr = 25;
+    stunlandspr = 25;
+    stunspr = 25;
+    recoveryspr = 25;
+    stompedspr = 25;
+    grabbedspr = 23;
+}
+
+if (state != (4 << 0))
+    depth = 0;
+
+if (state != (138 << 0))
+    thrown = false;
+
+if (flash == true && alarm[2] <= 0)
+    alarm[2] = 0.15 * room_speed;
